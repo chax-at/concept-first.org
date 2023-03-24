@@ -1,0 +1,69 @@
+---
+import NavItem from '../components/NavItem.astro';
+
+const { title } = Astro.props;
+const { frontmatter } = Astro.props;
+let pages = [];
+let getPages = [
+    await Astro.glob('../pages/*'),
+    await Astro.glob('../pages/concepts/*'),
+    await Astro.glob('../pages/concept-example/*')
+];
+
+function pushGroup(groupName: string): void {
+    if (pages.find((entry) => entry.group === groupName) === undefined) {
+        pages.push({ group: groupName, children: []});
+    }
+}
+
+function pushNavEntry(arr: [], data: { path: string, title: string }): void {
+    arr.push({ path: data.path, title: data.title });
+}
+
+function createNavElement(path: string, title: string, group: { inGroup: boolean, groupName: string }): void {
+    if (path === '') {
+        path = '/';
+    }
+
+    if (group.inGroup) {
+        pushGroup(group.groupName);
+        pages.find((entry) => {
+            if (entry.group === group.groupName) {
+                pushNavEntry(entry.children, { path, title });
+            }
+        });
+    } else {
+        pushNavEntry(pages, { path, title });
+    }
+}
+
+getPages.forEach((directory) => {
+    directory.forEach((entry) => {
+        createNavElement(entry.url, entry.frontmatter.title, entry.frontmatter.group);
+    })
+});
+---
+
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{ frontmatter.title }</title>
+	</head>
+	<body class="container mx-auto font-mono bg-gray-100 pt-8 pb-8 text-gray-600">
+	<div class="flex flex-row justify-between gap-8 items-stretch">
+	    <nav class="self-start basis-1/3 space-y-6 bg-white px-4 py-5 shadow sm:overflow-hidden sm:rounded-md">
+	        <ul>
+	            { pages.map((entry) => <NavItem entry={entry} />) }
+        	</ul>
+	    </nav>
+	    <div class="self-start basis-2/3 space-y-6 bg-white px-4 py-5 shadow sm:overflow-hidden sm:rounded-md">
+	        <h1 class="text-4xl">{ frontmatter.title }</h1>
+	        <slot />
+	    </div>
+	</div>
+	</body>
+</html>

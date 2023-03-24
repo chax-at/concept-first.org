@@ -1,0 +1,44 @@
+---
+export interface INavItem {
+    entry: {
+        path?: string;
+        title?: string;
+        group?: string;
+        children?: {
+            path: string;
+            title: string;
+        }[];
+    };
+}
+
+const { entry } = Astro.props;
+const children = [];
+if (entry.children) {
+    entry.children.forEach((child) => {
+        children.push(child);
+    });
+}
+const url = Astro.request.url.split('/').slice(3);
+let currentPath: string = '';
+url.forEach((urlElement) => currentPath += `/${urlElement}`)
+
+if (entry.path === currentPath) {
+    entry.activeStyle = 'color: red';
+} else {
+    children.forEach((child) => {
+        if (child.path === currentPath) {
+            child.activeStyle = 'color: red';
+        }
+    })
+}
+---
+
+<li>
+    <a href={ entry.path } style={ entry.activeStyle } class="text-2xl text-indigo-600 hover:text-indigo-400">{ entry.title }</a>
+    <div>
+        <div class="text-2xl text-gray-600 mt-3">{ entry.group }</div>
+        <ul>
+            { children.map((child) => <li><a href={ child.path } style={ child.activeStyle } class="text-indigo-600 hover:text-indigo-400">{ child.title }</a></li>) }
+        </ul>
+    </div>
+</li>
