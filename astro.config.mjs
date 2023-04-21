@@ -7,6 +7,8 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
+  site: 'https://chax-at.github.io',
+  base: '/concept-first.org',
   markdown: {
     drafts: true,
     rehypePlugins: [[addClasses, {
