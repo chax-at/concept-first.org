@@ -1,12 +1,15 @@
-# Welcome to [Astro](https://astro.build)
+# Welcome to concept-first.org
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+We aim to create this Website together with you - yes, you - to create an information page about a process that should be standard (but isn't).
+Out goal is to make everyone understand why creating a concept (at least a rough one) is very important for project success.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+In the ideal World, you wouldn't have to argue, but we do, so we'd like this website as a argumentative helper why this is a good idea - and why concept creating should be a paid thing to do.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Please Help!
 
+Please just add a PR and we will gladly accept it, if it somehow helps our case.
+
+We built this with astro to create a very low entry bar to contibute - see below for documentation.
 
 ## 🚀 Project Structure
 
