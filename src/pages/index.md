@@ -70,4 +70,4 @@ die Entwickler bei der Umsetzung und versuchen das Projektziel zumindest teilwei
 Wo ist also der Unterschied?
 
 Concept First erlaubt es durchaus, nach einer ersten Konzeptphase den restlichen Weg agil zu gehen. 
-Es erlaubt per se sogar das Prinzip des agilen Fixpreises [(mehr dazu)](/concepts/agiler-fixpreis).
+Es erlaubt per se sogar das Prinzip des agilen Fixpreises [(mehr dazu)](/concepts/agile-fixed-price).
