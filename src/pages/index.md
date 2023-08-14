@@ -60,7 +60,7 @@ Mit einem Konzept in der richtigen Form kann in vertretbarer Zeit ein kostenlose
 ## Ist das dann nicht Projektplanung nach "Wasserfall"-Methodik? Das macht man doch nicht mehr?
 
 Richtig, Wasserfall hat per se einige Probleme in der Durchführung und ist ein Grund, warum Agile Methodiken entwickelt wurden.
-In der Agilität fehlt aber oft der Blick aufs Große Ganze, der zur grundlegenden Software-Architektur führt. Concept first ist daher die Synergie, die sich aus Wasserfall und agiler Entwicklung ergeben hat.
+In der Agilität fehlt aber oft der Blick aufs Große Ganze, der zur grundlegenden Software-Architektur führt. Concept first ist die Synergie aus Wasserfall und agiler Entwicklung.
 Auch für Projekte mit komplett ungewissen Features will man meist gewisse Randbedingungen festlegen - 
 für wie viele Benutzer soll es skalieren? Wie erweiterbar soll das später sein? Welche Faktoren sind wichtiger:
 Geld, Zeit, Qualität, Erweiterbarkeit, Simultane Benutzbarkeit, Reaktionsgeschwindigkeit, Skalierbarkeit?
