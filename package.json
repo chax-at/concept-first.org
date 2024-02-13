@@ -11,9 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.1.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.10",
     "astro": "^4.3.6",
-    "rehype-add-classes": "^1.0.0",
     "tailwindcss": "^3.2.4"
   }
 }
