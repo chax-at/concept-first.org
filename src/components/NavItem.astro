@@ -38,7 +38,7 @@ if (entry.path === currentPath) {
     <div>
         <div class="text-2xl text-gray-600 mt-3">{ entry.group }</div>
         <ul>
-            { children.map((child) => <li><a href={ child.path } style={ child.activeStyle } class="text-indigo-600 hover:text-indigo-400">{ child.title }</a></li>) }
+            { children.map((child) => <li><a href={ child.path } style={ child.activeStyle } class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">{ child.title }</a></li>) }
         </ul>
     </div>
 </li>
